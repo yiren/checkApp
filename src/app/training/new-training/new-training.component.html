@@ -1,0 +1,30 @@
+<section class="new-training-container" fxLayout fxLayoutAlign="center" *ngIf="!isTrainingStarted">
+    <mat-card fxFlex.gt-xs="400px" fxFlex.xs="100%">
+        <mat-card-title fxLayoutAlign="center">Start A New Exercise!</mat-card-title>
+        <mat-card-content fxLayoutAlign="center">
+            <mat-form-field>
+                <mat-select placeholder="Select Exercise">
+                    <mat-option value="1">
+                        深蹲
+                    </mat-option>
+                    <mat-option value="2">
+                        臥推
+                    </mat-option>
+                    <mat-option value="3">
+                        單腳蹲
+                    </mat-option>
+                    <mat-option value="4">
+                        划船
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="center">
+            <button mat-button (click)="onStartTraining()">Start</button>
+        </mat-card-actions>
+    </mat-card>
+</section>
+<section class="new-training-container" *ngIf="isTrainingStarted">
+    <yiren-current-training (stopCurrentTraining)="isTrainingStarted = false" fxLayout="column" fxLayoutAlign="center center"></yiren-current-training>
+</section>

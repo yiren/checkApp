@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+    <div>
+        <button mat-icon-button (click)="toggle()">
+        <mat-icon>menu</mat-icon></button>
+    </div>
+    <p>CheckUp</p>
+
+
+    <div fxFlex fxFlexLayout fxLayoutAlign="end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="nav-items">
+            <li>
+                <a [routerLink]="['auth','signin']">Sign In</a></li>
+            <li><a [routerLink]="['auth','signup']">Sign Up</a></li>
+            <li><a [routerLink]="['training']">Training</a></li>
+            <li><a [routerLink]="['auth','signup']">Log out</a></li>
+        </ul>
+    </div>
+
+</mat-toolbar>
+<section>
+    <router-outlet></router-outlet>
+</section>
+<div fxLayout>
+    <div style="background:black" fxFlex="2 0 auto">1</div>
+    <div style="background:red" fxFlex>2</div>
+    <div style="background:blue" fxFlex>3</div>
+    <div style="background:green" fxFlex>4</div>
+</div>
