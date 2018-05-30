@@ -15,6 +15,9 @@
                 },
                 "@schematics/angular:service": {
                     "spec": false
+                },
+                "@ngrx/schematics:component": {
+                    "styleext": "scss"
                 }
             },
             "architect": {
@@ -124,5 +127,8 @@
             }
         }
     },
-    "defaultProject": "checkApp"
+    "defaultProject": "checkApp",
+    "cli": {
+        "defaultCollection": "@ngrx/schematics"
+    }
 }
